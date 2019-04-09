@@ -11,7 +11,7 @@ RUN set -x && \
         cd frp_${FRP_VERSION}_linux_amd64 && \
         mkdir /frp && \
         mv frpc /frpc && \
-    mv frpc.ini /frp/frpc.ini && \
+        mv frpc.ini /frp/frpc.ini && \
         cd .. && \
         rm -rf *.tar.gz && \
         rm -rf frp_${FRP_VERSION}_linux_amd64
