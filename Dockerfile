@@ -10,12 +10,12 @@ RUN set -x && \
         tar xzf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
         cd frp_${FRP_VERSION}_linux_amd64 && \
         mkdir /frp && \
-        mv frpc /frpc && \
-        mv frpc.ini /frp/frpc.ini && \
+        mv frps /frps && \
+        mv frps.ini /frp/frps.ini && \
         cd .. && \
         rm -rf *.tar.gz && \
         rm -rf frp_${FRP_VERSION}_linux_amd64
 
-VOLUME /frp
+EXPOSE 7000 7500
 
-CMD /frpc -c /frp/frpc.ini
+ENTRYPOINT ["/frps","-c","/frp/frps.ini"]
