@@ -15,7 +15,7 @@ docker build -t xzxiaoshan/frpc .
 **3、创建启动容器**
 
 ```
-docker run -itd -v /opt/test/frp/client:/frp xzxiaoshan/frpc /bin/sh
+docker run -itd --name=frpc -v /opt/test/frp/client:/frp xzxiaoshan/frpc
 ```
 
 **4、访问**
